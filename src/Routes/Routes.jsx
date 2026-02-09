@@ -20,89 +20,85 @@ import BlogDetailsPage from "../Pages/BlogDetailsPage";
 import BlogSidebarPage from "../Pages/BlogSidebarPage";
 
 export const router = createBrowserRouter([
-    {
-      path: "/",
-      Component: Layout3,
-      children: [                      
-        {
-            path: "/home2",
-            Component: Home2
-        },  
-        {
-          path: "/about",
-          Component: AboutPage
-        },
-        {
-          path: "/destination",
-          Component: DestinationPage
-        },          
-        {
-          path: "/destination/destination-details",
-          Component: DestinationDetailsPage
-        },        
-        {
-          path: "/tour",
-          Component: TourPage
-        },
-        {
-          path: "/tour/tour-details",
-          Component: TourDetailsPage
-        },
-        {
-          path: "/activities",
-          Component: ActivitiesPage
-        },
-        {
-          path: "/activities/activities-details",
-          Component: ActivitiesDetailsPage
-        },
-        {
-          path: "/team",
-          Component: TeamPage
-        },
-        {
-          path: "/team/team-details",
-          Component: TeamDetailsPage
-        },
-        {
-          path: "/contact",
-          Component: ContactPage
-        },
-        {
-          path: "/blog",
-          Component: BlogGrid
-        },
-        {
-          path: "/blog-sidebar",
-          Component: BlogSidebarPage
-        },        
-        {
-          path: "/blog/blog-details",
-          Component: BlogDetailsPage
-        },
-
-
-      ],
-    },
-    {
-      path: '/',
-      Component: Layout2,
-      children: [
-        {
-          index: true,
-          Component: Home,
-        },                           
-      ],
-    },     
-    {
-      path: 'home3',
-      Component: Main,
-      children: [
-        {
-          index: true,
-          Component: Home3,
-        },                           
-      ],
-    },      
-
-  ]);
+  {
+    Component: Layout3,
+    children: [
+      {
+        path: "/home2",
+        Component: Home2,
+      },
+      {
+        path: "/about",
+        Component: AboutPage,
+      },
+      {
+        path: "/destination",
+        Component: DestinationPage,
+      },
+      {
+        path: "/destination/destination-details",
+        Component: DestinationDetailsPage,
+      },
+      {
+        path: "/tour",
+        Component: TourPage,
+      },
+      {
+        path: "/tour/tour-details",
+        Component: TourDetailsPage,
+      },
+      {
+        path: "/activities",
+        Component: ActivitiesPage,
+      },
+      {
+        path: "/activities/activities-details",
+        Component: ActivitiesDetailsPage,
+      },
+      {
+        path: "/team",
+        Component: TeamPage,
+      },
+      {
+        path: "/team/team-details",
+        Component: TeamDetailsPage,
+      },
+      {
+        path: "/contact",
+        Component: ContactPage,
+      },
+      {
+        path: "/blog",
+        Component: BlogGrid,
+      },
+      {
+        path: "/blog-sidebar",
+        Component: BlogSidebarPage,
+      },
+      {
+        path: "/blog/blog-details",
+        Component: BlogDetailsPage,
+      },
+    ],
+  },
+  {
+    path: "/",
+    Component: Layout2,
+    children: [
+      {
+        index: true,
+        Component: Home,
+      },
+    ],
+  },
+  {
+    path: "home3",
+    Component: Main,
+    children: [
+      {
+        index: true,
+        Component: Home3,
+      },
+    ],
+  },
+]);

@@ -9939,7 +9939,7 @@ input.main-search-input::placeholder {
   background-color: var(--green-dark);
 }
 .header_style_2_0.cs-gescout_show .cs_site_branding img{
-  filter: brightness(0) invert(1);
+  filter: none;
 }
 @media only screen and (max-width: 1400px) and (min-width: 1000px) {
     .cs_hero.cs_style_3 {
@@ -10005,4 +10005,15 @@ input.main-search-input::placeholder {
 }
 .hero-1 .hero-content .booking-list-area .booking-list .form .single-select option{
   color: #000;
+}
+/* Custom Logo Sizing */
+.cs_site_branding img {
+    max-width: 180px;
+    height: auto;
+}
+
+.footer-widget-wrapper-new .widget-head img,
+.single-widget-items .widget-head img {
+    max-width: 200px;
+    height: auto;
 }
