@@ -44,25 +44,6 @@ function Footer() {
 
   return (
     <footer className="footer-v2">
-      {/* Newsletter / CTA Section */}
-      <div className="footer-cta-container">
-        <div className="footer-cta-card">
-          <div className="cta-content">
-            <h3>Ready to Explore Sri Lanka?</h3>
-            <p>
-              Join our newsletter for exclusive tour packages and travel tips
-              sent to your inbox.
-            </p>
-          </div>
-          <form className="cta-form" onSubmit={(e) => e.preventDefault()}>
-            <input type="email" placeholder="Your email address" required />
-            <button type="submit" className="cta-btn">
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </div>
-
       <div className="main-footer">
         <div className="footer-wrapper">
           <div className="footer-grid-v2">
@@ -206,9 +187,16 @@ function Footer() {
             rights reserved.
           </p>
           <div className="f-policy-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
-            <span className="sc-text">Built with ❤️ for Travelers</span>
+            <span className="sc-text">
+              Crafted by :{" "}
+              <a
+                href="https://infernation.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                infernation.com
+              </a>
+            </span>
           </div>
         </div>
       </div>
