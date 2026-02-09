@@ -7,7 +7,6 @@ import {
   FaPhoneAlt,
   FaChevronRight,
   FaMapMarkerAlt,
-  FaExternalLinkAlt,
 } from "react-icons/fa";
 import logo from "../assets/logo.png";
 import "./Footer.css";
@@ -26,20 +25,6 @@ function Footer() {
     { path: "/driver-service", label: "Driver Service" },
     { path: "/about-us", label: "About Us" },
     { path: "/contact", label: "Contact Us" },
-  ];
-
-  const travelResources = [
-    {
-      label: "Visa Information",
-      path: "https://www.eta.gov.lk/",
-      external: true,
-    },
-    { label: "Travel Insurance", path: "#" },
-    {
-      label: "Currency Converter",
-      path: "https://www.xe.com/",
-      external: true,
-    },
   ];
 
   return (
@@ -112,32 +97,6 @@ function Footer() {
                       <FaChevronRight className="f-icon" />
                       {link.label}
                     </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Resources Column */}
-            <div className="footer-col">
-              <h4 className="f-title">Resources</h4>
-              <ul className="f-links">
-                {travelResources.map((link) => (
-                  <li key={link.label}>
-                    {link.external ? (
-                      <a
-                        href={link.path}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <FaExternalLinkAlt className="f-icon sm" />
-                        {link.label}
-                      </a>
-                    ) : (
-                      <Link to={link.path}>
-                        <FaChevronRight className="f-icon" />
-                        {link.label}
-                      </Link>
-                    )}
                   </li>
                 ))}
               </ul>

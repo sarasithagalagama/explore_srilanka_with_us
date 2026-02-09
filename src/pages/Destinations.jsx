@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import "./Destinations.css";
 
 function Destinations() {
@@ -76,6 +77,8 @@ function Destinations() {
         "Royal Botanical Gardens, Peradeniya",
         "Udawatta Kele Sanctuary",
         "Ambuluwawa Tower",
+        "Knuckles Mountain Range",
+        "Esala Perahera Festival (July/August)",
         "Knuckles Mountain Range",
         "Esala Perahera Festival (July/August)",
       ],
@@ -195,6 +198,19 @@ function Destinations() {
 
   return (
     <div className="destinations">
+      <Helmet>
+        <title>
+          Popular Destinations in Sri Lanka | Sigiriya, Ella, Galle & More
+        </title>
+        <meta
+          name="description"
+          content="Explore top destinations in Sri Lanka including Sigiriya, Kandy, Ella, Yala National Park, and pristine beaches. Plan your perfect route with our guide."
+        />
+        <meta
+          name="keywords"
+          content="Sri Lanka destinations, Sigiriya Rock, Ella Sri Lanka, Yala safari, Galle Fort, best places to visit in Sri Lanka"
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="page-hero">
         <div className="page-hero-content">
@@ -223,6 +239,7 @@ function Destinations() {
                     <img
                       src={`/src/assets/Images/${destination.image}`}
                       alt={destination.name}
+                      loading="lazy"
                     />
                   </div>
                 )}

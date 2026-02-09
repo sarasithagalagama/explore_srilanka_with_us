@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { FaCar, FaCheck, FaRoute, FaUserTie } from "react-icons/fa";
 import Button from "../components/Button";
 import "./DriverService.css";
@@ -20,14 +21,25 @@ function DriverService() {
 
   return (
     <div className="driver-service">
+      <Helmet>
+        <title>Private Driver in Sri Lanka | Car Rental with Driver</title>
+        <meta
+          name="description"
+          content="Hire an experienced private driver in Sri Lanka for a safe and comfortable journey. Flexible schedules, local insights, and luxury vehicles available."
+        />
+        <meta
+          name="keywords"
+          content="private driver Sri Lanka, car with driver Sri Lanka, Sri Lanka transport services, rent car Sri Lanka driver, luxury travel Sri Lanka"
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="page-hero">
         <div className="page-hero-content">
           <h1>Private Driver with Car</h1>
           <p>
-            Experience Sri Lanka with comfort and peace of mind. Our reliable
-            private car service connects you with the island's best local
-            drivers.
+            For travelers who prefer comfort, safety, and local knowledge, we
+            offer a private car with an experienced driver for your journey
+            across Sri Lanka.
           </p>
         </div>
       </section>
@@ -118,10 +130,8 @@ function DriverService() {
 
           <div className="info-box-modern">
             <p>
-              <strong>Note:</strong> This service is designed to support
-              independent, flexible travel. Your driver acts as a local expert
-              to help you navigate the island comfortably and safely at your own
-              pace.
+              <strong>Note:</strong> This service can be combined with any
+              itinerary or booked separately.
             </p>
           </div>
         </div>

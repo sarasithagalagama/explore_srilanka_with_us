@@ -31,7 +31,7 @@
 
 .footer-grid-v2 {
   display: grid;
-  grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr; /* Adjusted for 3 columns: Brand, Quick Links, Services */
   gap: var(--spacing-2xl);
   margin-bottom: var(--spacing-3xl);
 }

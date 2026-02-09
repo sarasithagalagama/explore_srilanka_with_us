@@ -1,25 +1,37 @@
+import { Helmet } from "react-helmet-async";
 import { FaEye, FaBullseye, FaCheck, FaHeart } from "react-icons/fa";
 import Button from "../components/Button";
 import "./AboutUs.css";
 
 function AboutUs() {
   const mission = [
-    "Promote cultural and natural heritage",
-    "Reliable local travel guidance",
-    "Safe and flexible travel support",
-    "Sustainable tourism practices",
+    "To promote Sri Lanka’s cultural and natural heritage",
+    "To assist travelers with reliable travel guidance",
+    "To offer safe, flexible, and personalized travel support",
+    "To support sustainable and responsible tourism",
   ];
 
   const whyUs = [
     "Local expertise with global perspective",
     "Personalized travel planning",
-    "Honest and transparent communication",
-    "Focus on authentic experiences",
+    "Honest guidance and transparent communication",
+    "Focus on authentic experiences.",
     "Reliable on-ground support",
   ];
 
   return (
     <div className="about-us">
+      <Helmet>
+        <title>About Us | Explore Sri Lanka With Us</title>
+        <meta
+          name="description"
+          content="We are a local travel team dedicated to helping you discover the real Sri Lanka. Learn about our mission, vision, and commitment to authentic travel experiences."
+        />
+        <meta
+          name="keywords"
+          content="about explore sri lanka with us, sri lanka travel agency, local tour operators sri lanka, responsible tourism sri lanka"
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="page-hero">
         <div className="page-hero-content">
@@ -53,9 +65,9 @@ function AboutUs() {
               </div>
               <div className="premium-card-body">
                 <p className="premium-card-desc">
-                  To become the most trusted digital travel platform showcasing
-                  the true beauty of Sri Lanka while delivering authentic
-                  experiences.
+                  To become a trusted digital travel platform showcasing the
+                  true beauty of Sri Lanka while delivering authentic,
+                  responsible, and memorable travel experiences.
                 </p>
                 <div className="premium-highlights-box">
                   <h4>Our Goals</h4>
@@ -87,8 +99,7 @@ function AboutUs() {
               </div>
               <div className="premium-card-body">
                 <p className="premium-card-desc">
-                  We empower independent travelers with the tools, knowledge,
-                  and local support needed to explore Sri Lanka with confidence.
+                  We are dedicated to the following goals:
                 </p>
                 <div className="premium-highlights-box">
                   <h4>Core Focus</h4>

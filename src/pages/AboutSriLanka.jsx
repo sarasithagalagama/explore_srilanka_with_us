@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import {
   FaUmbrellaBeach,
   FaMountain,
@@ -48,14 +49,30 @@ function AboutSriLanka() {
 
   return (
     <div className="about-sri-lanka">
+      <Helmet>
+        <title>
+          About Sri Lanka | Travel Guide, Culture & Best Time to Visit
+        </title>
+        <meta
+          name="description"
+          content="Learn about Sri Lanka's rich history, diverse culture, and best travel times. Discover why the Pearl of the Indian Ocean is a top travel destination."
+        />
+        <meta
+          name="keywords"
+          content="about Sri Lanka, Sri Lanka culture, best time to visit Sri Lanka, Sri Lanka history, Sri Lanka travel guide"
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="page-hero">
         <div className="page-hero-content">
           <h1>Discover Sri Lanka</h1>
           <p>
-            The Pearl of the Indian Ocean—a compact island rich in history,
-            nature, culture, and warm hospitality. Experience the best of South
-            Asia in a single journey.
+            Sri Lanka, known as the Pearl of the Indian Ocean, is a compact
+            island rich in history, nature, culture, and warm hospitality.
+            Within a few hours of travel, visitors can experience golden
+            beaches, misty mountains, ancient kingdoms, wildlife safaris, and
+            vibrant cities. This diversity makes Sri Lanka an ideal destination
+            for both short holidays and extended explorations.
           </p>
         </div>
       </section>
@@ -107,14 +124,16 @@ function AboutSriLanka() {
               </div>
               <h2>Culture & Traditions</h2>
               <p>
-                A vibrant blend of spiritual heritage, ancient kingdoms, and
-                diverse religious influences.
+                Sri Lankan culture is deeply influenced by Buddhism, Hinduism,
+                Islam, and Christianity. Ancient temples, colorful festivals,
+                traditional dance forms, and daily rituals reflect the country’s
+                spiritual heritage.
               </p>
               <h4>Highlights</h4>
               <ul className="icon-list">
                 <li>
                   <FaCheck className="list-icon" />
-                  <span>Vesak Festival</span>
+                  <span>Vesak Festival (Buddhist celebrations)</span>
                 </li>
                 <li>
                   <FaCheck className="list-icon" />
@@ -122,11 +141,11 @@ function AboutSriLanka() {
                 </li>
                 <li>
                   <FaCheck className="list-icon" />
-                  <span>Traditional Dance</span>
+                  <span>Traditional Kandyan and Low-Country dances</span>
                 </li>
                 <li>
                   <FaCheck className="list-icon" />
-                  <span>Village Customs</span>
+                  <span>Village lifestyles and local customs</span>
                 </li>
               </ul>
             </div>
@@ -137,7 +156,10 @@ function AboutSriLanka() {
                 <FaUtensils />
               </div>
               <h2>Sri Lankan Food</h2>
-              <p>Famous for rich spices, fresh coconut, and bold flavors.</p>
+              <p>
+                Sri Lankan cuisine is known for its rich spices, fresh
+                ingredients, and bold flavors.
+              </p>
               <ul className="icon-list">
                 {dishes.map((dish, index) => (
                   <li key={index}>

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import {
   FaLeaf,
   FaLandmark,
@@ -13,83 +14,69 @@ function TourItineraries() {
   const tours = [
     {
       icon: <FaLeaf />,
-      title: "Nature & Wildlife Tours",
+      title: "Wildlife & Nature Tours",
       type: "nature",
       description:
-        "Experience Sri Lanka's rich biodiversity, national parks, and scenic landscapes.",
-      highlights: [
-        "Udawalawe National Park – Elephant safaris",
-        "Yala National Park – Leopards and wildlife",
-        "Hill country landscapes in Ella and Nuwara Eliya",
-        "Waterfalls, forests, and scenic viewpoints",
-      ],
-      idealFor: "Nature lovers, photographers, eco-tourists",
+        "Focus on national parks, elephants, leopards, and scenic landscapes.",
+      highlights: ["Udawalawe", "Yala", "Ella", "Nuwara Eliya"],
+      idealFor: "Nature lovers, photographers",
     },
     {
       icon: <FaLandmark />,
-      title: "Cultural & Heritage Tours",
+      title: "Cultural Heritage Tours",
       type: "culture",
-      description:
-        "Discover ancient cities, sacred temples, and UNESCO World Heritage Sites.",
-      highlights: [
-        "Sigiriya Rock Fortress",
-        "Kandy and the Temple of the Sacred Tooth Relic",
-        "Galle Fort",
-        "Cultural villages and traditional experiences",
-      ],
+      description: "Explore ancient cities, temples, and history.",
+      highlights: ["Sigiriya", "Kandy", "Galle", "Polonnaruwa"],
       idealFor: "History lovers, cultural explorers",
     },
     {
-      icon: <FaHeart />,
-      title: "Honeymoon Tours",
-      type: "romance",
-      description:
-        "Romantic journeys combining scenic beauty, privacy, and unforgettable moments.",
-      highlights: [
-        "Misty hill country views in Ella and Nuwara Eliya",
-        "Sunset beaches in Galle, Hikkaduwa, and Mirissa region",
-        "Leisure time, scenic walks, and photo spots",
-      ],
-      idealFor: "Couples, honeymooners",
+      icon: <FaHeart />, // Using Heart for Beach/Relaxation or maybe need a better icon like Umbrella/Sun if available, but staying with existing import style for now.
+      title: "Beach & Relaxation Tours",
+      type: "beach",
+      description: "Laid-back travel along the coast.",
+      highlights: ["Mirissa", "Bentota", "Trincomalee", "Arugam Bay"],
+      idealFor: "Couples, families, leisure travelers",
     },
     {
       icon: <FaMountain />,
-      title: "Adventure Tours",
+      title: "Adventure & Hiking Tours",
       type: "adventure",
-      description: "For travelers seeking excitement and outdoor activities.",
-      highlights: [
-        "Hiking in Ella and Little Adam's Peak",
-        "Surfing in Arugam Bay",
-        "Wildlife safaris",
-        "Scenic train rides",
-      ],
+      description: "Active travel with hiking and exploration.",
+      highlights: ["Ella Rock", "Adam’s Peak", "Knuckles Mountain Range"],
       idealFor: "Adventure seekers, active travelers",
     },
     {
       icon: <FaCog />,
       title: "Custom Tours",
       type: "custom",
-      description:
-        "Design your own itinerary based on your interests, time, and budget.",
-      highlights: [
-        "Mix beaches, culture, wildlife, and hills",
-        "Flexible travel pace",
-        "Personalized route planning",
-      ],
+      description: "Plan a trip that fits your schedule and interests.",
+      highlights: ["Flexible routes", "Personalized planning"],
       idealFor: "Families, solo travelers, long stays",
     },
   ];
 
   return (
     <div className="tour-itineraries">
+      <Helmet>
+        <title>
+          Sri Lanka Tour Packages | Wildlife, Culture, Beach & Adventure
+        </title>
+        <meta
+          name="description"
+          content="Choose from our carefully curated Sri Lanka tour packages. Whether you love wildlife, history, or beaches, we have the perfect itinerary for you."
+        />
+        <meta
+          name="keywords"
+          content="Sri Lanka tour packages, wildlife tours Sri Lanka, Sri Lanka cultural tours, adventure tours Sri Lanka, family holidays Sri Lanka"
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="page-hero">
         <div className="page-hero-content">
-          <h1>Explore Sri Lanka Your Way</h1>
+          <h1>Tour Packages & Itineraries</h1>
           <p>
-            Our itineraries are carefully designed to showcase the best of Sri
-            Lanka while allowing flexibility based on your interests, pace, and
-            travel dates.
+            Explore Sri Lanka with our carefully planned tour packages. We offer
+            a range of itineraries designed to suit different travel styles.
           </p>
         </div>
       </section>

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import {
   FaEnvelope,
   FaWhatsapp,
@@ -11,13 +12,25 @@ import "./Contact.css";
 function Contact() {
   return (
     <div className="contact">
+      <Helmet>
+        <title>Contact Us | Plan Your Sri Lanka Trip</title>
+        <meta
+          name="description"
+          content="Get in touch with us to start planning your Sri Lanka adventure. Contact us via Email, WhatsApp, or Phone for personalized travel assistance."
+        />
+        <meta
+          name="keywords"
+          content="contact explore sri lanka, sri lanka travel inquiry, plan trip to sri lanka, whatsapp travel sri lanka"
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="page-hero">
         <div className="page-hero-content">
           <h1>Get in Touch</h1>
           <p>
-            We are here to help you plan your perfect Sri Lanka journey. Reach
-            out through any of these methods for personalized assistance.
+            We are happy to help you plan your Sri Lanka journey. Send us your
+            travel dates and interests, and we will assist you with a customized
+            plan.
           </p>
         </div>
       </section>
