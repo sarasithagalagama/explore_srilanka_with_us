@@ -82,67 +82,58 @@
 
 @media (max-width: 768px) {
   .header {
-    height: 50px;
+    padding: 10px 0;
   }
   
-  .menu-toggle {
-    color: var(--color-primary);
+  .header-container {
+    padding: 0 15px;
   }
 
-  .nav-link {
-    color: var(--color-primary); /* Dark text on mobile */
-  }
-
-  .nav-link.active {
-    color: var(--color-primary);
-  }
-  
-  .header-cta {
-    display: none; /* Hide CTA on tablet/mobile to save space */
-  }
-
-  .menu-toggle {
+  .mobile-toggle {
     display: block;
+    z-index: 1002; /* Ensure above menu */
+    position: relative;
   }
 
-  .nav {
+  /* Mobile Navigation Drawer */
+  .nav-menu {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 320px;
+    right: -100%; /* Hidden by default */
+    width: 280px;
     height: 100vh;
-    background: var(--color-bg-white);
-    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
-    transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-    overflow-y: auto;
-    padding: 80px 32px 32px; /* Space for close button */
-    display: flex;
-    flex-direction: column;
-  }
-
-  .nav-open {
-    right: 0;
-  }
-
-  .nav-list {
+    background: #ffffff;
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
-    width: 100%;
+    padding: 80px 24px 24px;
+    gap: 20px;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1001; /* Below toggle button */
   }
-  
-  .nav-item {
-    width: 100%;
-    border-bottom: 1px solid var(--color-gray-100);
-    padding-bottom: 16px;
+
+  .nav-menu.active {
+    right: 0; /* Slide in */
   }
 
   .nav-link {
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-text-primary);
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
   }
-  
-  .nav-link::after {
-    display: none; /* No underline anim on mobile */
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--color-primary);
+    padding-left: 5px; /* Subtle movement */
+  }
+
+  /* Desktop CTA hidden in header, maybe move inside menu if needed, 
+     but for now user didn't ask to move it. 
+     We'll hide the desktop wrapping div. */
+  .desktop-cta {
+    display: none;
   }
 }
