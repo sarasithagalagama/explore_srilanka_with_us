@@ -1,0 +1,122 @@
+.page-hero {
+  background: var(--gradient-ocean);
+  color: var(--color-white);
+  padding: var(--spacing-4xl) var(--spacing-lg);
+  text-align: center;
+}
+
+.page-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-hero h1 {
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+  margin-bottom: var(--spacing-xl);
+}
+
+.page-hero p {
+  font-size: var(--font-size-lg);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.bg-light {
+  background: var(--color-gray-50);
+}
+
+.content-section {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--spacing-2xl);
+  align-items: start;
+}
+
+.section-icon {
+  font-size: 80px;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.content-section h2 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.content-section h4 {
+  font-size: var(--font-size-xl);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-gray-800);
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  padding: var(--spacing-sm) 0;
+  padding-left: var(--spacing-xl);
+  position: relative;
+  color: var(--color-gray-700);
+  font-size: var(--font-size-lg);
+}
+
+.feature-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+  font-size: var(--font-size-xl);
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.time-card {
+  padding: var(--spacing-xl);
+}
+
+.time-card h4 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  margin-top: 0;
+}
+
+.time-card p {
+  margin: 0;
+  color: var(--color-gray-600);
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: var(--spacing-3xl) var(--spacing-md);
+  }
+
+  .page-hero h1 {
+    font-size: var(--font-size-4xl);
+  }
+
+  .content-section {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .section-icon {
+    font-size: 60px;
+    text-align: center;
+  }
+
+  .time-grid {
+    grid-template-columns: 1fr;
+  }
+}

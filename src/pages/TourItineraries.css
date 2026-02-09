@@ -1,0 +1,124 @@
+.tour-section {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--spacing-3xl);
+  padding: var(--spacing-4xl) 0;
+  border-bottom: 2px solid var(--color-gray-100);
+}
+
+.tour-section:last-child {
+  border-bottom: none;
+}
+
+.tour-reverse {
+  grid-template-columns: 1fr auto;
+}
+
+.tour-reverse .tour-icon-large {
+  order: 2;
+}
+
+.tour-reverse .tour-content {
+  order: 1;
+}
+
+.tour-icon-large {
+  font-size: 120px;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tour-content h2 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-gray-900);
+}
+
+.tour-description {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-700);
+  margin-bottom: var(--spacing-xl);
+}
+
+.tour-content h4 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-gray-800);
+}
+
+.tour-highlights {
+  list-style: none;
+  padding: 0;
+  margin-bottom: var(--spacing-xl);
+}
+
+.tour-highlights li {
+  padding: var(--spacing-sm) 0;
+  padding-left: var(--spacing-xl);
+  position: relative;
+  color: var(--color-gray-700);
+  font-size: var(--font-size-base);
+}
+
+.tour-highlights li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+  font-size: var(--font-size-xl);
+}
+
+.tour-ideal {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-600);
+  font-style: italic;
+}
+
+.cta-section {
+  background: var(--gradient-sunset);
+  color: var(--color-white);
+  padding: var(--spacing-4xl) 0;
+}
+
+.cta-section h2 {
+  color: var(--color-white);
+  margin-bottom: var(--spacing-lg);
+}
+
+.cta-section p {
+  font-size: var(--font-size-lg);
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 700px;
+  margin: 0 auto var(--spacing-2xl);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: var(--spacing-lg);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .tour-section,
+  .tour-reverse {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .tour-reverse .tour-icon-large,
+  .tour-reverse .tour-content {
+    order: initial;
+  }
+
+  .tour-icon-large {
+    font-size: 80px;
+    text-align: center;
+  }
+}
