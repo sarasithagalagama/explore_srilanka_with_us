@@ -414,7 +414,7 @@
   .hero {
     height: 100dvh; /* Use dynamic viewport height for mobile browsers */
     min-height: 600px; /* Ensure minimum height for content */
-    padding: 0 var(--spacing-md);
+    padding: 100px var(--spacing-md) 0;
     margin: 0; /* Remove margin to restore full bleed */
     border-radius: 0;
   }
