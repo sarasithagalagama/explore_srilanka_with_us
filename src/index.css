@@ -192,7 +192,7 @@ li {
 }
 
 .section {
-  padding: var(--spacing-2xl) 0;
+  padding: var(--spacing-xl) 0;
   position: relative;
 }
 
@@ -493,7 +493,7 @@ input:focus, textarea:focus, select:focus {
     --spacing-4xl: 4rem;
     --spacing-3xl: 3rem;
   }
-  .section { padding: var(--spacing-3xl) 0; }
+  .section { padding: var(--spacing-lg) 0; }
   
   .page-hero {
     height: auto;
@@ -524,7 +524,7 @@ input:focus, textarea:focus, select:focus {
 /* Premium UI Components (Shared across Driver Service, About Us, Contact, etc.) */
 
 .modern-section {
-  padding: var(--spacing-3xl) 0;
+  padding: var(--spacing-2xl) 0;
 }
 
 .modern-intro {
@@ -676,7 +676,7 @@ input:focus, textarea:focus, select:focus {
 
 /* Premium CTA Banner (Bottom of pages) */
 .premium-cta-section {
-  padding: var(--spacing-3xl) 0;
+  padding: var(--spacing-2xl) 0;
 }
 .premium-cta-container {
   background: #f4f8f7;

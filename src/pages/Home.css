@@ -103,7 +103,7 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: var(--spacing-3xl);
-  padding: var(--spacing-4xl) 0;
+  padding: var(--spacing-3xl) 0;
   overflow: hidden;
 }
 
