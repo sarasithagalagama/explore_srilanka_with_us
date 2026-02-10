@@ -10,7 +10,11 @@ import {
   FaCar,
   FaCheck,
   FaArrowRight,
+  FaGlobeAsia,
+  FaHandshake,
+  FaCalendarAlt,
 } from "react-icons/fa";
+import { FaCarSide } from "react-icons/fa6";
 import Button from "../components/Button";
 import "./Home.css";
 
@@ -131,11 +135,26 @@ function Home() {
   ];
 
   const whyChooseUs = [
-    "In-depth local knowledge of Sri Lanka’s key destinations",
-    "Well-structured itineraries based on realistic travel distances",
-    "Honest destination and experience recommendations",
-    "Flexible travel plans tailored to your interests and schedule",
-    "Optional local travel assistance when required",
+    {
+      text: "In-depth local knowledge of Sri Lanka’s key destinations",
+      icon: <FaGlobeAsia />,
+    },
+    {
+      text: "Well-structured itineraries based on realistic travel distances",
+      icon: <FaRoute />,
+    },
+    {
+      text: "Honest destination and experience recommendations",
+      icon: <FaHandshake />,
+    },
+    {
+      text: "Flexible travel plans tailored to your interests and schedule",
+      icon: <FaCalendarAlt />,
+    },
+    {
+      text: "Optional local travel assistance when required",
+      icon: <FaCarSide />,
+    },
   ];
 
   const howItWorks = [
@@ -295,7 +314,10 @@ function Home() {
           <div
             className="modern-grid"
             style={{
-              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              gap: "var(--spacing-lg)",
             }}
           >
             {whyChooseUs.map((feature, index) => (
@@ -303,18 +325,32 @@ function Home() {
                 key={index}
                 className="premium-card"
                 style={{
-                  padding: "var(--spacing-xl)",
+                  padding: "var(--spacing-lg)",
+                  flexDirection: "row",
                   alignItems: "center",
-                  textAlign: "center",
+                  textAlign: "left",
+                  gap: "var(--spacing-md)",
+                  flex: "1 1 300px",
+                  maxWidth: "500px",
+                  minHeight: "auto",
                 }}
               >
                 <div
                   className="premium-card-icon"
-                  style={{ marginBottom: "var(--spacing-md)" }}
+                  style={{
+                    marginBottom: 0,
+                    fontSize: "1.5rem",
+                    padding: "10px",
+                    borderRadius: "50%",
+                  }}
                 >
-                  <FaCheck />
+                  {feature.icon}
                 </div>
-                <h3 style={{ fontSize: "1.2rem", margin: 0 }}>{feature}</h3>
+                <h3
+                  style={{ fontSize: "1.1rem", margin: 0, lineHeight: "1.4" }}
+                >
+                  {feature.text}
+                </h3>
               </div>
             ))}
           </div>

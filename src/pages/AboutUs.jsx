@@ -1,5 +1,14 @@
 import { Helmet } from "react-helmet-async";
-import { FaEye, FaBullseye, FaCheck, FaHeart } from "react-icons/fa";
+import {
+  FaEye,
+  FaBullseye,
+  FaCheck,
+  FaHeart,
+  FaGlobeAsia,
+  FaHandshake,
+  FaCalendarAlt,
+} from "react-icons/fa";
+import { FaCarSide } from "react-icons/fa6";
 import Button from "../components/Button";
 import "./AboutUs.css";
 
@@ -12,11 +21,26 @@ function AboutUs() {
   ];
 
   const whyUs = [
-    "Local expertise with global perspective",
-    "Personalized travel planning",
-    "Honest guidance and transparent communication",
-    "Focus on authentic experiences.",
-    "Reliable on-ground support",
+    {
+      text: "Local expertise with global perspective",
+      icon: <FaGlobeAsia />,
+    },
+    {
+      text: "Personalized travel planning",
+      icon: <FaCalendarAlt />,
+    },
+    {
+      text: "Honest guidance and transparent communication",
+      icon: <FaHandshake />,
+    },
+    {
+      text: "Focus on authentic experiences.",
+      icon: <FaHeart />,
+    },
+    {
+      text: "Reliable on-ground support",
+      icon: <FaCarSide />,
+    },
   ];
 
   return (
@@ -125,37 +149,46 @@ function AboutUs() {
             <h2>Why Travel with Us?</h2>
             <p>Experience the difference of a locally-led travel expert.</p>
           </div>
-          <div className="modern-grid">
+          <div
+            className="modern-grid"
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              gap: "var(--spacing-lg)",
+            }}
+          >
             {whyUs.map((item, index) => (
               <div
                 key={index}
                 className="premium-card"
-                style={{ height: "auto", padding: "var(--spacing-xl)" }}
+                style={{
+                  padding: "var(--spacing-lg)",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  textAlign: "left",
+                  gap: "var(--spacing-md)",
+                  flex: "1 1 300px",
+                  maxWidth: "500px",
+                  minHeight: "auto",
+                }}
               >
                 <div
+                  className="premium-card-icon"
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "var(--spacing-md)",
+                    marginBottom: 0,
+                    fontSize: "1.5rem",
+                    padding: "10px",
+                    borderRadius: "50%",
                   }}
                 >
-                  <FaCheck
-                    className="check-icon"
-                    style={{
-                      color: "var(--color-accent)",
-                      fontSize: "var(--font-size-lg)",
-                    }}
-                  />
-                  <p
-                    style={{
-                      margin: 0,
-                      fontWeight: 600,
-                      color: "var(--color-primary)",
-                    }}
-                  >
-                    {item}
-                  </p>
+                  {item.icon}
                 </div>
+                <h3
+                  style={{ fontSize: "1.1rem", margin: 0, lineHeight: "1.4" }}
+                >
+                  {item.text}
+                </h3>
               </div>
             ))}
           </div>
