@@ -198,7 +198,13 @@ function Home() {
 
       {/* Hero Section - Full Screen & Modern */}
       <section className="hero">
-        <div className="hero-background"></div>
+        <img
+          src="/Images/7ZM1XLJZRMSK0R.jpg"
+          alt="Sri Lanka Scenery"
+          className="hero-background"
+          fetchpriority="high"
+          decoding="async"
+        />
         <div className="hero-overlay"></div>
         <div className="hero-content">
           <h1 className="hero-title animate-on-scroll is-visible delay-100">
@@ -232,17 +238,6 @@ function Home() {
         </div>
 
         {/* Scroll Indicator */}
-        <div
-          className="scroll-indicator animate-on-scroll is-visible delay-300"
-          onClick={() =>
-            window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
-          }
-        >
-          <div className="mouse">
-            <div className="wheel"></div>
-          </div>
-          <div className="arrow-down"></div>
-        </div>
       </section>
 
       {/* What We Do - Split Layout Asymmetrical */}
@@ -252,30 +247,24 @@ function Home() {
             <div className="split-content animate-on-scroll">
               <h2>What We Do</h2>
               <div className="what-we-do-content">
-                <p
-                  style={{
-                    fontSize: "1.2rem",
-                    marginBottom: "1.5rem",
-                    color: "var(--color-primary)",
-                  }}
-                >
+                <p className="section-lead">
                   Planning a multi-destination trip in Sri Lanka requires
                   careful timing, realistic travel routes, and an understanding
                   of local conditions.
                 </p>
-                <p>
+                <p className="section-text">
                   Choosing the right mix of cities, nature, wildlife, and
                   beaches can make a significant difference to your overall
                   experience.
                 </p>
-                <div className="float-box glass-panel">
-                  <p style={{ margin: 0, fontWeight: 500 }}>
+                <div className="quote-box">
+                  <blockquote>
                     "We support your travel planning by providing clear
                     destination insights, suggested itineraries, and local
                     guidance. Our role is to help you create a well-balanced
                     travel plan that allows you to explore Sri Lanka comfortably
                     and independently."
-                  </p>
+                  </blockquote>
                 </div>
               </div>
             </div>
@@ -286,6 +275,7 @@ function Home() {
                 alt="Sri Lanka Aerial View"
                 className="split-image"
                 loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -368,6 +358,7 @@ function Home() {
                     alt={destination.name}
                     className="destination-bg-image"
                     loading="lazy"
+                    decoding="async"
                   />
                   <div className="destination-overlay"></div>
                 </div>

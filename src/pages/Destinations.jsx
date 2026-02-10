@@ -240,6 +240,7 @@ function Destinations() {
                       src={`/Images/${destination.image}`}
                       alt={destination.name}
                       loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 )}
